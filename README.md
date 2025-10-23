@@ -1,4 +1,4 @@
-✅ Secure Web App with User Authentication & OTP Encryption
+Secure Web App with User Authentication & OTP Encryption
 📌 Project Overview
 
 This mini-project demonstrates a secure web application that uses:
