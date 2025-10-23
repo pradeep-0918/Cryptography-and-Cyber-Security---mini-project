@@ -1,73 +1,64 @@
-# Welcome to your Lovable project
+✅ Secure Web App with User Authentication & OTP Encryption
+📌 Project Overview
 
-## Project info
+This mini-project demonstrates a secure web application that uses:
+✅ User Authentication (Login/Registration)
+✅ OTP-based Two-Factor Authentication (2FA)
+✅ Encrypted OTP protection using AES/RSA
+✅ Secure password hashing with bcrypt
+✅ JWT-based session management
 
-**URL**: https://lovable.dev/projects/e4bcfd1d-eb7e-4a5b-912c-d6a3f193c4c2
+The main goal is to showcase how cryptography and web security techniques are applied in real-world authentication systems.
 
-## How can I edit this code?
+🎯 Objectives
 
-There are several ways of editing your application.
+Implement secure user login & registration.
 
-**Use Lovable**
+Generate OTPs and encrypt them before storage.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e4bcfd1d-eb7e-4a5b-912c-d6a3f193c4c2) and start prompting.
+Send OTPs using Email/SMS.
 
-Changes made via Lovable will be committed automatically to this repo.
+Validate OTPs with time-based expiration.
 
-**Use your preferred IDE**
+Use bcrypt for password hashing and salting.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Provide JWT-based session handling.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Ensure modern UI with a user-friendly flow.
 
-Follow these steps:
+🔐 Security Features Used
+Feature	Technique
+Password Security	bcrypt hashing + salting
+OTP Security	AES/RSA encryption
+OTP Expiry	Time-limited validation
+Data Transport	HTTPS (recommended)
+Session Security	JWT token-based authentication
+Attack Protection	Rate-limited login attempts
+🛠️ Tech Stack
+Layer	Tools/Frameworks
+Frontend	HTML, CSS, JavaScript (React optional)
+Backend	Python Flask / Node.js Express
+Database	MySQL / PostgreSQL / MongoDB
+Encryption	bcrypt, AES, RSA
+OTP	pyotp / random / Twilio
+Session	JWT
+📍 Workflow (Step-by-Step)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1️⃣ User Registers → Password is hashed & stored
+2️⃣ User Logs in → Backend verifies credentials
+3️⃣ OTP is generated (6-digits) → encrypted (AES/RSA) → stored with timestamp
+4️⃣ OTP is sent via Email/SMS
+5️⃣ User enters OTP → Backend decrypts & verifies
+6️⃣ On success → Dashboard access given using JWT session
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+🚀 Future Enhancements
 
-# Step 3: Install the necessary dependencies.
-npm i
+✅ Biometric Login
+✅ WhatsApp-based OTP
+✅ Role-based Access Control (Admin/User)
+✅ Cloud Deployment with SSL
+✅ Login Analytics & OTP failure logs
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+🏁 Conclusion
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/e4bcfd1d-eb7e-4a5b-912c-d6a3f193c4c2) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This mini-project shows how encryption, authentication, and cryptography combine to build secure and reliable web authentication systems. It’s an ideal demonstration for cryptography, web security, and cyber defense concepts.
